@@ -1,14 +1,16 @@
 package elevator;
 
-public interface Elevator{
- Integer floor();
- Boolean call();
- Integer moves();
- Direction direction();
+public interface Elevator {
+    Integer floor();
+
+    void call();
+
+    Direction to();
+
+    Direction direction();
 
 
-
-     public enum Direction {
+    public enum Direction {
         UP,
         DOWN,
         STOP;

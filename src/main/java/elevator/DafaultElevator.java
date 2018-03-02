@@ -13,12 +13,11 @@ public class DafaultElevator implements Elevator {
     }
 
     @Override
-    public Boolean call() {
-        return null;
+    public void call() {
     }
 
     @Override
-    public Integer moves() {
+    public Direction to() {
         return null;
     }
 
@@ -26,4 +25,5 @@ public class DafaultElevator implements Elevator {
     public Direction direction() {
         return null;
     }
+
 }
