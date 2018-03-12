@@ -1,19 +1,51 @@
 package elevator;
 
+import java.util.Timer;
+
 public interface Elevator {
-    Integer floor();
+    int floor();
 
-    void call();
+    Queue call(int floor);
 
-    Direction to();
+    Moves moves();
 
-    Direction direction();
+    public class Moves {
 
+        private int floor;
+        private Direction direction;
 
-    public enum Direction {
-        UP,
-        DOWN,
-        STOP;
+        Moves(int floor, Direction direction) {
+            this.floor = floor;
+            this.direction = direction;
+        }
+
+        int to() {
+            return floor;
+        }
+
+        public enum Direction {
+            UP,
+            DOWN,
+            STOP;
+        }
+
+        public Direction direction() {
+
+            return direction;
+        }
+    }
+
+    public interface Queue {
+        String toString();
+
+        Queue queue();
+
+        int position();
+
+        Timer time();
+
     }
 
 }
+
+

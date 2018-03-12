@@ -1,28 +1,20 @@
 package elevator;
 
 public class DafaultElevator implements Elevator {
-    private int floor;
 
-    public DafaultElevator(int floor) {
-        this.floor = floor;
+
+    @Override
+    public int floor() {
+        return 0;
     }
 
     @Override
-    public Integer floor() {
-        return floor;
-    }
-
-    @Override
-    public void call() {
-    }
-
-    @Override
-    public Direction to() {
+    public Queue call(int floor) {
         return null;
     }
 
     @Override
-    public Direction direction() {
+    public Moves moves() {
         return null;
     }
 
